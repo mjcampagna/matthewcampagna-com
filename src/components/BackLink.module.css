@@ -1,0 +1,12 @@
+.link {
+  display: inline-block;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 150ms ease;
+}
+
+.link:hover {
+  color: var(--color-text);
+}

@@ -1,7 +1,155 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import IconExternalLink from '../components/IconExternalLink.astro';
 ---
 
 <Layout title="Matthew Campagna">
-  <h1>Matthew Campagna</h1>
+  <div class="container">
+
+    <section class="intro">
+      <h1>Matthew Campagna</h1>
+      <p class="title">Senior Frontend Engineer</p>
+      <p class="bio">I've spent nearly twenty years building software—from publishing tools for photographers to AI-native collaboration platforms. I enjoy designing interfaces, solving difficult product problems, and building software that continues to improve over time.</p>
+      <div class="links">
+        <a href="https://github.com/mjcampagna" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mjcampagna" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.npmjs.com/~slithy" target="_blank" rel="noopener noreferrer">npm</a>
+      </div>
+    </section>
+
+    <section class="work">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <a href="https://glue.ai" target="_blank" rel="noopener noreferrer">Glue <IconExternalLink /></a>
+          <p class="meta">Senior Frontend Engineer · 2022–2026</p>
+          <p>Built and shaped the frontend of an AI-native collaboration platform on a lean engineering team. Led development of flagship experiences including the conversational AI interface, unified inbox, and threads view, while designing core architecture and driving significant performance improvements.</p>
+        </li>
+        <li>
+          <a href="https://theturninggate.net" target="_blank" rel="noopener noreferrer">The Turning Gate <IconExternalLink /></a>
+          <p class="meta">Founder & Software Engineer · 2007–Present</p>
+          <p>Co-founded an independent software company and led frontend engineering, UX, and product strategy across a portfolio of publishing tools for professional photographers spanning nearly twenty years.</p>
+        </li>
+        <li>
+          <a href="https://joe.coffee/" target="_blank" rel="noopener noreferrer">Joe Coffee <IconExternalLink /></a>
+          <p class="meta">Principal Frontend Engineer · 2021–2022</p>
+          <p>Led frontend architecture for a ground-up rebuild of the consumer ordering and loyalty platform, serving as the primary frontend technical partner from concept through launch.</p>
+        </li>
+        <li>
+          <a href="https://www.agero.com/technology-partnerships/swoop" target="_blank" rel="noopener noreferrer">Swoop <IconExternalLink /></a>
+          <p class="meta">Senior Software Engineer · 2018–2021</p>
+          <p>Built customer-facing features for a web-based roadside dispatch platform using React and TypeScript, contributing to frontend architecture and ongoing application modernization.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="work">
+      <h2>Independent Work</h2>
+      <ul>
+        <li>
+          <a href="/work/backlight">Backlight</a>
+          <p>Commercial publishing platform for professional photographers</p>
+        </li>
+        <li>
+          <a href="/work/kiln">Kiln</a>
+          <p>Cross-platform Electron app built around modular workspaces and keyboard-first workflows</p>
+        </li>
+        <li>
+          <a href="/work/tessera">Tessera</a>
+          <p>Experimental image editor exploring computational photography and graphics optimization</p>
+        </li>
+      </ul>
+    </section>
+
+  </div>
 </Layout>
+
+<style>
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .intro h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: 0.25rem;
+  }
+
+  .intro .title {
+    font-size: var(--text-base);
+    color: var(--color-muted);
+    margin-bottom: 2rem;
+  }
+
+  .intro .bio {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-muted);
+    max-width: 56ch;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .links a {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .links a:hover {
+    color: var(--color-text);
+  }
+
+  .work h2 {
+    font-size: var(--text-xs);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .work ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .work li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .work li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .work li p {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    margin-top: 0.25rem;
+  }
+
+  .work li .meta {
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+    letter-spacing: 0.02em;
+    margin-top: 0.2rem;
+  }
+</style>
