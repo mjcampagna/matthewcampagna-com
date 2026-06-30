@@ -12,14 +12,15 @@ Personal website / portfolio for matthewcampagna.com. Built with Astro, deployed
 - **TypeScript**
 - **MDX** — content source for case studies and writing
 - **React** — islands only, where interactivity is genuinely needed
-- **Tailwind CSS**
+- **CSS Modules** — scoped styles colocated with components
 
 ## Commands
 
 ```bash
-pnpm dev          # dev server
-pnpm build        # production build
-pnpm preview      # preview production build locally
+pnpm dev               # dev server
+pnpm astro dev --background  # dev server in background (preferred in agentic contexts)
+pnpm build             # production build
+pnpm preview           # preview production build locally
 ```
 
 ## Content Architecture
