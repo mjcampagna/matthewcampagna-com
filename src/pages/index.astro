@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import IconExternalLink from '../components/IconExternalLink.astro';
 ---
 
-<Layout title="Matthew Campagna">
+<Layout title="Matthew Campagna" description="Senior frontend engineer and co-founder with nearly twenty years of experience building and shipping software, from publishing tools for professional photographers to AI-native collaboration platforms.">
   <div class="container">
 
     <section class="intro">
       <h1>Matthew Campagna</h1>
       <p class="title">Senior Frontend Engineer</p>
-      <p class="bio">I've spent nearly twenty years building software—from publishing tools for photographers to AI-native collaboration platforms. I enjoy designing interfaces, solving difficult product problems, and building software that continues to improve over time.</p>
+      <p class="bio">Senior frontend engineer and co-founder with nearly twenty years of experience building and shipping software, from publishing tools for professional photographers to AI-native collaboration platforms. My background in photography and visual design shapes how I approach interfaces: I care about usability, presentation, and the relationship between technology and the people who use it.</p>
       <div class="links">
         <a href="https://github.com/mjcampagna" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/mjcampagna" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -52,11 +52,25 @@ import IconExternalLink from '../components/IconExternalLink.astro';
         </li>
         <li>
           <a href="/work/kiln">Kiln</a>
-          <p>A cross-platform Electron application for photographers built around modular workspaces, reusable widgets, and keyboard-first interaction. Includes a command palette, persistent layouts, image export pipelines, and local and remote file management.</p>
+          <p>A cross-platform Electron application for photographers built around modular workspaces, reusable widgets, and full keyboard accessibility. Includes a command palette, persistent layouts, image export pipelines, and local and remote file management.</p>
         </li>
         <li>
           <a href="/work/tessera">Tessera</a>
-          <p>An experimental image editor exploring computational photography, graphics optimization, and AI-assisted engineering.</p>
+          <p>An image editor that reconstructs photographs from geometric primitives using mathematical algorithms rather than AI.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="work">
+      <h2>Selected Packages</h2>
+      <ul>
+        <li>
+          <a href="https://www.npmjs.com/package/@slithy/react-tessera-gallery" target="_blank" rel="noopener noreferrer">react-tessera-gallery <IconExternalLink /></a>
+          <p>A React component for justified gallery layouts, using optimal line-breaking to distribute images across rows without clipping or distortion.</p>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/package/@slithy/modal-kit" target="_blank" rel="noopener noreferrer">modal-kit <IconExternalLink /></a>
+          <p>Headless React modal components — accessible behavior and focus management without prescribed styles.</p>
         </li>
       </ul>
     </section>

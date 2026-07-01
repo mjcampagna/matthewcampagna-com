@@ -1,8 +1,39 @@
 ---
 title: Tessera
-description: An experimental image editor exploring computational photography, graphics optimization, and AI-assisted engineering.
-role: Founder & Software Engineer
-period: 2023–Present
+description: An image editor that reconstructs photographs from geometric primitives using mathematical algorithms rather than AI.
+role: Creator
+period: 2026–Present
+url: https://tessera.slithy.me/
 ---
 
-Work in progress.
+<img src="/images/tessera/tessera-split-parrots.webp" alt="Tessera interface" />
+
+Tessera is an image editor that reconstructs photographs from geometric primitives: triangles, ellipses, hexagons, rectangles, circles, and more. The reconstruction is mathematical, not generative. No AI is involved. In a moment when AI image generation has become ubiquitous, Tessera is a reminder that interesting visual results can come from algorithms.
+
+It began as a project marking Backlight's tenth anniversary, built on an open-source algorithmic foundation, and has grown into something more substantial.
+
+## How It Works
+
+Select an image, configure the shape types and quantities, and watch the reconstruction happen in real time. Each shape is evaluated for fitness against the source image, progressively building an approximation that combines elements of abstract and impressionist aesthetics. Export as JPG, PNG, SVG, WebP, or GIF when done.
+
+## Presets and Shape Control
+
+Custom presets save shape configurations and parameter sets for quick recall. Shapes can be constrained by Hue, Saturation, and Luma values, making it possible to target specific areas or color ranges of an image, or to layer different shape types with independent rules.
+
+## Color Separations
+
+Tessera can split an image into CMYK plates for offset printing, process color approximations for screenprinting with custom ink definitions, RGB channels, and tonal zone separations across up to ten color channels. Duotone and monotone modes add two-ink and single-ink workflows, with dithering options including Bayer and Floyd-Steinberg. At least one user I've heard from has put this to use printing t-shirts.
+
+## Engine
+
+The reconstruction algorithm is built on [`@slithy/prim-lib`](https://www.npmjs.com/package/@slithy/prim-lib), derived from `primitive.js` and ultimately from Michael Fogleman's Go library `primitive`. The core hill-climbing algorithm is unchanged; the engineering work went into making it fast enough to be practical in a browser.
+
+The original creates a new canvas element for every shape rasterization call, roughly 58,000 per run at default settings. Reusing a single canvas reduced rasterization time from roughly 37 seconds to under a second: a 27× improvement. That change shifted the bottleneck to pixel difference math, which scales with `computeSize²` and is the irreducible cost of the algorithm. The engine also runs in a Web Worker via `OffscreenCanvas`, keeping the UI responsive during reconstruction. `prim-lib` is published separately under the `@slithy` scope.
+
+## Platform
+
+The browser version is free and runs as a progressive web app, supporting offline use. Both versions include an Unsplash image browser for discovering and processing royalty-free photographs within the app. A paid desktop application is available for macOS, Windows, and Linux, adding folder browsing and Backlight album integration.
+
+## Development
+
+There is some irony in building a product that deliberately avoids AI while using AI tools throughout development. Tessera was a deliberate experiment in AI-assisted workflows; Claude and Codex were part of the process from the start, and the experience has meaningfully shaped how I approach that kind of collaboration.
