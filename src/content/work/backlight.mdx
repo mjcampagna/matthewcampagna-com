@@ -6,4 +6,48 @@ period: 2007–Present
 url: https://backlight.me/
 ---
 
-Work in progress.
+<img
+  src="/images/backlight/album-management.webp"
+  alt="Backlight album management screen"
+/>
+
+## Origin
+
+General-purpose CMSes like WordPress are well-suited to blogging, but have never been a natural fit for photographers managing high volumes of images or galleries continuously in flux. Backlight is conceived as a photography-first CMS, designed around the specific needs of professional photographers rather than adapted from tools built for other purposes.
+
+It grew out of the CE series, a family of Lightroom web publishing plugins built by The Turning Gate. Lightroom's Web module was never designed for full website publishing, and we had pushed it as far as it would go. Backlight freed us from those constraints: a purpose-built platform with no ceiling.
+
+## Technology
+
+Backlight is downloadable software, not a SaaS. Users own their installation, host it where they choose, and are not dependent on a subscription to keep their website running.
+
+We built the application on PHP and SQLite rather than MySQL, designed to run in the kind of standard shared hosting environment a WordPress user might purchase. Our goal was simple: Backlight should be installable anywhere WordPress can be installed, and ideally easier. Because SQLite requires no database server configuration, users just upload the files and run the installer; Backlight handles the rest.
+
+Setup is fast and easy. Within minutes, a user can begin to publish photo galleries, personalize page content, or customize site presentation.
+
+## The Designer
+
+<img
+  src="/images/backlight/set-grid---designer.webp"
+  alt="Backlight designer panel showing a photo gallery grid with travel photography"
+/>
+
+Rather than themes, Backlight offers a template designer. Users can enable or disable page components, select gallery layouts and behaviors, and customize appearance, positioning, and content to a considerable degree. The framework accommodates all of it without breaking. The result is a wide design space within a coherent, stable structure.
+
+## The Publisher
+
+The Publisher is Backlight's primary content management tool. Photographers organize their work into a hierarchy of Album Sets and Albums, uploading images and managing metadata either through Backlight's web-based admin or via a Lightroom plugin for those who prefer to stay in that workflow. The same organizational structure drives the public-facing site, so what the photographer builds in the Publisher is what visitors navigate.
+
+Beyond photo galleries, the Publisher handles static pages, essays, and blogging, giving photographers a complete website rather than just a gallery. Content is backed by RSS feeds at both the site and album level, so visitors can subscribe to a photographer's full portfolio or follow individual collections.
+
+Admin feeds notify photographers of new orders, contact form submissions, and client feedback, and can be wired into automation services like Zapier or IFTTT.
+
+## Extensibility
+
+While Backlight offers a complete no-code experience, it also accommodates users with web knowledge who want to go further. Custom stylesheets can be applied site-wide or per-page, HTML and Markdown can be mixed into page content, and the PHPlugins framework provides injection hooks for custom headers, menus, footers, and scripts at the global, local, or per-page level. Client-facing pages adhere to modern web standards and are straightforward to work with.
+
+We also expose a JSON API for headless querying of albums, sets, and photos, with endpoints for retrieving individual resources or entire collections.
+
+## Conclusion
+
+Backlight gives photographers everything they need to build and maintain a professional web presence, with deep personalization opportunities and their images always at the center. It is used by professional and hobbyist photographers worldwide, with recorded users on at least six continents. We are proud of the loyalty it inspires: we regularly hear from users who have been with us for more than a decade.
