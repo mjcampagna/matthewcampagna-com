@@ -14,6 +14,7 @@ import IconExternalLink from '../components/IconExternalLink.astro';
         <a href="https://github.com/mjcampagna" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/mjcampagna" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://www.npmjs.com/~slithy" target="_blank" rel="noopener noreferrer">npm</a>
+        <a href="/Campagna, Matthew - Resume (202607).pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
       </div>
     </section>
 
@@ -41,6 +42,7 @@ import IconExternalLink from '../components/IconExternalLink.astro';
           <p>Built customer-facing features for a web-based roadside dispatch platform using React and TypeScript, contributing to frontend architecture and ongoing application modernization.</p>
         </li>
       </ul>
+      <a href="/Campagna, Matthew - Resume (202607).pdf" target="_blank" rel="noopener noreferrer" class="resume-link">Full résumé ↗</a>
     </section>
 
     <section class="work">
@@ -158,6 +160,19 @@ import IconExternalLink from '../components/IconExternalLink.astro';
     font-size: var(--text-sm);
     color: var(--color-muted);
     margin-top: 0.25rem;
+  }
+
+  .resume-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .resume-link:hover {
+    color: var(--color-text);
   }
 
   .work li .meta {
